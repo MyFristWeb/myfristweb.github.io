@@ -1,0 +1,22 @@
+/*------------------------------------------------------------------------------
+
+    Template: Sa- Minimalist Ecommerce html template
+    Description: This is html5 template
+    Author: Devitems
+    Version: 1.0
+	Note: This core style file includes all external plugins css file.
+
+-------------------------------------------------------------------------------*/
+
+@import url("font-awesome.min.css");
+@import url("material-design-icon-font.min.css");
+@import url("animate.css");
+@import url("meanmenu.min.css");
+@import url("owl.carousel.css");
+@import url("owl.theme.css");
+@import url("nivo-slider.css");
+@import url("slick-slider.css");
+@import url("jquery-ui.css");
+@import url("owl.transitions.css");
+@import url("magnific-popup.css");
+@import url("default.css");
