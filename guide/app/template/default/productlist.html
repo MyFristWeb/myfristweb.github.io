@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" />
+<title>{sort:title}</title>
+<meta name="keywords" content="{sort:keywords}">
+<meta name="description" content="{sort:description}">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/pintuer.css" />
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/style.css" />
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery.min.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/pintuer.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/animate.min.js"></script>
+<script src="{pboot:sitedomain}/skin/js/main.js"></script>
+<!-- FOR IE9 below -->
+<!--[if lt IE 9]>
+	<script src="js/respond.js"></script>
+<![endif]-->
+
+</head>
+<body class="inner-box-body" id="product-box-id">
+<!-- 顶部导航 begin--> 
+{include file=head.html} 
+<!-- 顶部导航 end--> 
+
+<!-- 内容展示 begin-->
+<div class="layout"  id="fh5co-content_show">
+  <div class="container">
+    <div class="line">
+      <div class="show_content padding-large-top padding-bottom">
+        <div class="show_list product_list_box">
+          <div class="show-product not-animated" data-animate="zoomIn" data-delay="200">
+            <div class="line-big">
+              {pboot:list num=6 order=sorting}
+              <div class="xm4 xs4 xl6 margin-large-bottom text-center"><a href="[list:link]" title="[list:title]">
+                <div class="media-img">
+                  <div class="zoomimgs piczoomimgs" style="background-image:url([list:ico])"></div>
+                </div>
+                <div class="content">
+                  <h3>[list:title]</h3>
+                </div>
+                </a></div>
+				{/pboot:list}
+            </div>
+          </div>
+        </div>
+        {pboot:if({page:rows}>0)}
+      <div class="pagebar">
+        <div class="pagination">
+          <a class="page-item page-link st" href="{page:pre}" title="上一页"><<</a>
+          {page:numbar}
+          <a class="page-item page-link" href="javascript:;" title="当前页/总页数">{page:current}/{page:count}</a>
+          <a class="page-item page-link st" href="{page:next}" title="下一页">>></a>
+        </div>
+      </div>	
+    {else}
+      <div class="tac text-secondary">本分类下无任何数据！</div>
+    {/pboot:if}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 内容展示 end--> 
+<!--底部开始--> 
+{include file=footer.html}
+</body>
+</html>

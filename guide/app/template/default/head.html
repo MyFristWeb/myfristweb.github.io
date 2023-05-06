@@ -1,0 +1,21 @@
+<header id="fh5co-header">
+  <div class="layout fixed header-box">
+    <div class="container">
+      <div class="navbar">
+        <div class="navbar-head">
+          <h1><a href="{pboot:sitedomain}/" title="{pboot:sitetitle}"><img src="{pboot:sitelogo}" /></a></h1>
+        </div>
+        <div class="navbar-body">
+          <div class="nav-navicon" id="nav-main1">
+            <ul class="nav  nav-inline  nav-menu navbar-right">
+              <li {pboot:if(0=='{sort:scode}')}class="current"{/pboot:if}><a class="first-level" href="{pboot:sitedomain}/">首页</a></li>
+              {pboot:nav}
+              <li {pboot:if('[nav:scode]'=='{sort:tcode}')}class="current"{/pboot:if}><a href="[nav:link]" class="first-level">[nav:name]</a></li>
+              {/pboot:nav}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

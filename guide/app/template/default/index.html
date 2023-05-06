@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" />
+<title>{pboot:sitetitle}</title>
+<meta name="keywords" content="{pboot:sitekeywords}">
+<meta name="description" content="{pboot:sitedescription}">
+<meta name="author" content="www.pb2345.com"/>
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/pintuer.css" />
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/style.css" />
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery.min.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/pintuer.js"></script>
+<script src="{pboot:sitedomain}/skin/js/animate.min.js"></script>
+<script src="{pboot:sitedomain}/skin/js/jquery.flexslider-min.js"></script>
+<script src="{pboot:sitedomain}/skin/js/owl.carousel.js"></script>
+<script src="{pboot:sitedomain}/skin/js/main.js"></script>
+<script src="{pboot:sitedomain}/skin/js/index.js"></script>
+<!-- FOR IE9 below -->
+<!--[if lt IE 9]>
+	<script src="js/respond.js"></script>
+	<![endif]-->
+
+</head>
+<body id="index_box_id">
+<div class="main-top"> 
+  <!-- 顶部导航 begin-->
+  {include file=head.html}
+  <!-- 顶部导航 end--> 
+  
+  <!-- 轮播图片 begin-->
+  <div class="layout" id="fh5co-hero">
+    <div class="line">
+      <div class="flexslider">
+        <ul class="slides">
+          {pboot:slide gid=1 num=10}
+          <li><a href="[slide:link]" target="_blank"><img src="[slide:src]" alt="[slide:title]"></a></li>
+		  {/pboot:slide}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- 轮播图片 end--> 
+</div>
+<!--首页关于begin-->
+{pboot:sort scode=4}
+<div id="fh5co-about-us" class="layout">
+  <div class="bg-about">
+    <div class="container">
+      <div class="line-big show-list">
+        <div class="xl12 xs2 xm2 margin-large-bottom not-animated" data-animate="zoomIn" data-delay="200">
+          <div class="title">
+			<h3>[sort:name]</h3>
+			<p>[sort:subname]</p>
+          </div>
+        </div>
+        <div class="xl12 xs4 xm4 margin-large-bottom not-animated" data-animate="zoomIn" data-delay="200">
+          <div class="media-img"><img src="[sort:ico]" /></div>
+        </div>
+        <div class="xl12 xs6 xm6 margin-large-bottom not-animated" data-animate="zoomIn" data-delay="200">
+          <div class="content"> 
+          	{pboot:content id=19}[content:content drophtml=1 len=200]{/pboot:content}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{/pboot:sort}
+<!--首页关于 end--> 
+<!--首页产品展示 begin-->
+{pboot:sort scode=2}
+<div id="fh5co-product-list" class="layout">
+  <div class="bg-product">
+    <div class="container">
+      <div class="line-big">
+        <div class="xl12 xs2 xm2 margin-large-bottom not-animated" data-animate="zoomIn" data-delay="200">
+          <div class="title">
+			<h3>[sort:name]</h3>
+			<p>[sort:subname]</p>
+          </div>
+        </div>
+        <div class="xl12 xs10 xm10 margin-large-bottom not-animated  show-list" data-animate="zoomIn" data-delay="200">
+          {pboot:list scode=[sort:scode] num=3 order=sorting}
+          <div class="xm4 xb4 xs4 xl6 text-center margin-large-bottom">
+            <div class="pro-item"><a href="[list:link]" title="[list:title]">
+              <div class="portfolio-img">
+                <div class="zoomimgs piczoomimgs" style="background-image:url([list:ico])"></div>
+              </div>
+              <h3>[list:title]</h3>
+              </a></div>
+          </div>
+          {/pboot:list}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{/pboot:sort}
+<!--首页产品展示 end--> 
+<!--首页功效 begin-->
+{pboot:sort scode=1}
+<div id="fh5co-effect-list" class="layout">
+  <div class="bg-effect">
+    <div class="container">
+      <div class="line-big show-list">
+        <div class="xl12 xs2 xm3 margin-large-bottom not-animated" data-animate="zoomIn" data-delay="200">
+          <div class="title-box">
+			<h3>[sort:name]</h3>
+			<p>[sort:subname]</p>
+          </div>
+        </div>
+        <div class="xl12 xs4 xm3 margin-large-bottom not-animated" data-animate="zoomIn" data-delay="200">
+          <div class="content"> 
+          {pboot:content id=18}[content:content drophtml=1 len=200]{/pboot:content}
+            </div>
+        </div>
+        <div class="xl12 xs6 xm6 margin-large-bottom not-animated" data-animate="zoomIn" data-delay="200">
+          <div class="media-img"><img src="[sort:ico]" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{/pboot:sort}
+<!--首页功效 end--> 
+<!--首页新闻列表 begin-->
+{pboot:sort scode=3}
+<div id="fh5co-news-list" class="layout">
+  <div class="bg-news">
+    <div class="container">
+      <div class="line-big">
+        <div class="xl12 xs2 xm2 margin-large-bottom not-animated" data-animate="zoomIn" data-delay="200">
+          <div class="title">
+			<h3>[sort:name]</h3>
+			<p>[sort:subname]</p>
+          </div>
+        </div>
+        <div class="xl12 xs10 xm10 margin-large-bottom not-animated  show-list" data-animate="zoomIn" data-delay="200">
+          <ul>
+            {pboot:list scode=[sort:scode] num=4 order=sorting}
+            <li>
+              <div class="media media-x">
+                <div class="media-left float-left"><span class='time'>[list:date style=Y-m-d]</span></div>
+                <div class="media-body">
+                  <h3><a href="[list:link]" title="[list:title]">[list:title]</a></h3>
+                  <p>[list:description len=60]</p>
+                </div>
+              </div>
+            </li>
+			{/pboot:list}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{/pboot:sort}
+<!--首页新闻列表 end--> 
+<!--首页联系 begin-->
+<div id="fh5co-contact-us" class="layout">
+  <div class="bg-contact">
+    <div class="container">
+      <div class="line-big show-list">
+        <div class="xl12 xs2 xm3 margin-large-bottom not-animated" data-animate="zoomIn" data-delay="200">
+          <div class="title">
+            {pboot:sort scode=5}
+			<h3>[sort:name]</h3>
+			<p>[sort:subname]</p>
+			{/pboot:sort}
+          </div>
+        </div>
+        <div class="xl12 xs3 xm3 margin-large-bottom not-animated" data-animate="zoomIn" data-delay="200">
+          <div class="attention-box">
+            <h3>关注</h3>
+            <ul class="social">
+              <li><a href="http://wpa.qq.com/msgrd?v=1&amp;uin={pboot:companyqq}&amp;site=&amp;menu=yes" target="_blank"><i class="icon-qq"></i></a></li>
+              <li id="f-weixin-id"> <a id="f-weixin" data-target="webuiPopover0"> <i class="icon-weixin"> </i> </a>
+                <div class="weixint-content hidden">
+                  <div class="text-center f-weixin-img"> <img src="{pboot:companyweixin}"> </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="xl12 xs7 xm6 margin-large-bottom not-animated" data-animate="zoomIn" data-delay="200">
+          <div class="content">
+            {pboot:sort scode=5}
+            <h3>[sort:subname] Us</h3>
+            {/pboot:sort}
+            <div class="intro">
+              <div class="line-big">
+                <div class="xl12 xs7 xm7">
+                  <p> 地址：{pboot:companyaddress} </p>
+                  <p> 电话：{pboot:companyphone} </p>
+                  <p> 邮箱：<a href="mailto:{pboot:companyemail}">{pboot:companyemail}</a> </p>
+                </div>
+                <div class="xl12 xs5 xm5">
+                  <p> 联系：{pboot:companycontact} </p>
+                  <p> 手机：{pboot:companymobile} </p>
+                  <p> Q Q：<a href="http://wpa.qq.com/msgrd?v=3&amp;uin={pboot:companyqq}&amp;site=qq&amp;menu=yes" target="_blank">{pboot:companyqq}</a> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--首页联系 end--> 
+<!--底部开始-->
+{include file=footer.html}
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" />
+<title>{sort:title}</title>
+<meta name="keywords" content="{sort:keywords}">
+<meta name="description" content="{sort:description}">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/pintuer.css" />
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/style.css" />
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery.min.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/pintuer.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/animate.min.js"></script>
+<script src="{pboot:sitedomain}/skin/js/main.js"></script>
+<!-- FOR IE9 below -->
+<!--[if lt IE 9]>
+	<script src="js/respond.js"></script>
+<![endif]-->
+</head>
+<body class="inner-box-body">
+<!-- 顶部导航 begin-->
+{include file=head.html}
+<!-- 顶部导航 end--> 
+
+<!-- 内容展示 begin-->
+<div class="layout"  id="fh5co-content_show">
+  <div class="container">
+    <div class="content-boxs">
+      <div class="detail">
+        <div class="line-big about-boxs">
+          <div class="xl12 xs12 xm12 margin-large-bottom not-animated" data-animate="zoomIn" data-delay="200" id="maximg">
+            {content:content}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 内容展示 end--> 
+<!--底部开始-->
+{include file=footer.html}
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" />
+<title>{content:title}-{pboot:sitetitle}</title>
+<meta name="keywords" content="{content:keywords}">
+<meta name="description" content="{content:description}">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/pintuer.css" />
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/style.css" />
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery.min.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/pintuer.js"></script>
+<script src="{pboot:sitedomain}/skin/js/animate.min.js"></script>
+<script src="{pboot:sitedomain}/skin/js/main.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery-migrate-1.2.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/jquery.fancybox.css" media="screen" />
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $( ".image-popup").fancybox();
+		$("#showdiv").fancybox({'centerOnScroll':true});
+    });
+</script>
+<!-- FOR IE9 below -->
+<!--[if lt IE 9]>
+	<script src="js/respond.js"></script>
+<![endif]-->
+
+</head>
+<body class="inner-box-body" id="product-box-id">
+<!-- 顶部导航 begin--> 
+{include file=head.html} 
+<!-- 顶部导航 end--> 
+
+<!-- 内容展示 begin-->
+<div class="layout"  id="fh5co-content_show">
+  <div class="container">
+    <div class="line">
+      <div class="show_content  padding-large-bottom content_detail">
+        <div class="product-detail">
+          <div class="line-big">
+            <div class="xm4 xs5 xl12">
+              <div class="content-img"><a href="{content:ico}" title="{content:title}" class="image-popup" target="_blank"><img src="{content:ico}" /></a></div>
+            </div>
+            <div class="xm8 xs7 xl12">
+              <h1>{content:title}</h1>
+              <div class="p_desc">
+				{content:description}
+              </div>
+              <div class="add_to_inquiry margin-big-top margin-bottom">
+                <button class="button button-big bg-main dialogs" id="showdiv" href="#quirydialog">在线咨询</button>
+              </div>
+              <div id="quirydialog">
+                <div class="qdialog">
+                  <div class="qdialog-head"> <strong>在线咨询</strong> </div>
+                  <div class="qdialog-body">
+                    <form enctype="multipart/form-data" class="form-x" action="{pboot:msgaction}"  method="post">
+                      <div class="form-group" >
+                        <div class="label">
+                          <label for="p_name"> 产品名称 : </label>
+                        </div>
+                        <div class="field">
+                          <input class="input" id="p_name" name="p_name"  value="{content:title}"  type="text" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="label">
+                          <label for="email"> 电子邮箱 : </label>
+                        </div>
+                        <div class="field">
+                          <input class="input" name="email"  type="text" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="label">
+                          <label for="name"> 联系人 : </label>
+                        </div>
+                        <div class="field">
+                          <input class="input" name="name"  type="text" required />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="label">
+                          <label for="tel"> 电话 : </label>
+                        </div>
+                        <div class="field">
+                          <input class="input" name="tel" type="text" required />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="label">
+                          <label for="content"> 咨询内容 : </label>
+                        </div>
+                        <div class="field">
+                          <textarea class="input" name="content"   type="text"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-button margin-bottom">
+                        <button class="button bg-main margin-small-right" type="submit" id="tj">提交</button>
+                        <button class="button bg-main" type="reset">重置</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+				
+            </div>
+          </div>
+          <div class="line margin-large-top">
+            <div class="detail-title">
+              <h2>产品概述</h2>
+            </div>
+            <div class="description margin-big-top" id="maximg"> 
+            	{content:content}
+            </div>
+          </div>
+          <ul class="pager">
+            <li>上一篇：{content:precontent}</li> 
+            <li>下一篇：{content:nextcontent}</li> 
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 内容展示 end--> 
+<!--底部开始-->
+{include file=footer.html}
+</body>
+</html>

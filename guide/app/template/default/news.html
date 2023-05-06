@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" />
+<title>{content:title}-{pboot:sitetitle}</title>
+<meta name="keywords" content="{content:keywords}">
+<meta name="description" content="{content:description}">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/pintuer.css" />
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/css/style.css" />
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery.min.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/pintuer.js"></script>
+<script src="{pboot:sitedomain}/skin/js/animate.min.js"></script>
+<script src="{pboot:sitedomain}/skin/js/main.js"></script>
+<script type="text/javascript">showNum(5,'news','add','.countnum');</script>
+</head>
+<body class="inner-box-body" id="article-box-id">
+<!-- 顶部导航 begin-->
+{include file=head.html}
+<!-- 顶部导航 end-->
+
+<!-- 内容展示 begin-->
+<div class="layout"  id="fh5co-content_show">
+ <div class="container">
+     <div class="line">
+           <div class="show_content padding-large-bottom content_detail">
+              <div class="show_body detail">
+               <h1>{content:title}</h1>
+               <div class=" padding-bottom qhd-title"><span><strong>来源：</strong>{content:source}</span><span><strong>日期：</strong>{content:date style=Y-m-d}</span> <span><strong>浏览：</strong>{content:visits}</span></div>
+               <div class="description" id="maximg">
+               {content:content}
+              <ul class="pager padding-big-top padding-big-bottom"> 
+                <li>上一篇：{content:precontent}</li> 
+                <li>下一篇：{content:nextcontent}</li> 
+              </ul>
+            </div>
+          </div>
+        </div> 
+     </div>
+   </div>
+ </div>
+<!-- 内容展示 end-->
+<!--底部开始-->
+{include file=footer.html}
+</body>
+</html>
